@@ -12,6 +12,10 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationProperties {
 
     private String name;
+    private String author;
+    private String email;
+    private String url;
+    private String host;
     private String timeZone;
     private String relativePath;
     private Api api;
@@ -19,6 +23,34 @@ public class ApplicationProperties {
     @Getter
     @Setter
     public static class Api {
+
+        @Getter
+        @Setter
         private String uri;
+        private Documentation documentation;
+
+        @Getter
+        @Setter
+        public static class Documentation {
+
+            private Info info;
+            private ExternalDoc externalDoc;
+
+            @Getter
+            @Setter
+            public static class Info {
+                private String title;
+                private String version;
+            }
+
+            @Getter
+            @Setter
+            public static class ExternalDoc {
+                private String description;
+                private String url;
+            }
+        }
     }
+
+
 }

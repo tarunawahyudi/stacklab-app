@@ -1,14 +1,28 @@
 application:
   name: stacklab-identity-guard
+  author: Taruna Wahyudi
+  email: wahyuditaruna97@gmail.com
+  url: tarunawahyudi.github.io
+  host: http://localhost:${server.port}
   timeZone: Asia/Jakarta
   api:
     uri: /v1/api
+    documentation:
+      info:
+        title: Stacklab Identity Guard Documentation
+        version: 1.0.0
+      externalDoc:
+        description: Extended Documentation
+        url: http://example.com
 
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/db_stacklab_identity_guard
     username: root
     password: root
+  security:
+    user:
+      password: Test12345_
 
 server:
   port: 8080
