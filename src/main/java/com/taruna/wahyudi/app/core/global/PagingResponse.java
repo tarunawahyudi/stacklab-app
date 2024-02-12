@@ -1,4 +1,4 @@
-package com.taruna.wahyudi.app.core.spec;
+package com.taruna.wahyudi.app.core.global;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class WebResponse<T> {
+public class PagingResponse {
 
-    private String status;
+    private Integer currentPage;
 
-    private T data;
+    private Integer totalPage;
 
-    private PagingResponse pagingResponse;
+    private Integer size;
 }

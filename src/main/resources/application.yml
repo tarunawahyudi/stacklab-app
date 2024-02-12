@@ -1,11 +1,14 @@
 application:
-  name: stacklab-app
+  name: stacklab-identity-guard
   timeZone: Asia/Jakarta
   api:
     uri: /v1/api
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/stacklab
+    url: jdbc:mysql://localhost:3306/db_stacklab_identity_guard
     username: root
     password: root
+
+server:
+  port: 8080

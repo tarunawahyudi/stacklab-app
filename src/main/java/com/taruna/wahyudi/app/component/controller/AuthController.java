@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.taruna.wahyudi.app.component.model.dto.LoginUserRequest;
 import com.taruna.wahyudi.app.component.model.dto.TokenResponse;
 import com.taruna.wahyudi.app.component.service.AuthService;
-import com.taruna.wahyudi.app.core.spec.WebResponse;
+import com.taruna.wahyudi.app.core.global.WebResponse;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.http.MediaType;

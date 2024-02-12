@@ -3,7 +3,7 @@ package com.taruna.wahyudi.app.component.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.taruna.wahyudi.app.component.model.dto.RegisterUserRequest;
 import com.taruna.wahyudi.app.component.service.UserService;
-import com.taruna.wahyudi.app.core.spec.WebResponse;
+import com.taruna.wahyudi.app.core.global.WebResponse;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.http.MediaType;

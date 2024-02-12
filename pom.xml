@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.taruna.wahyudi</groupId>
-	<artifactId>stacklab-app</artifactId>
+	<artifactId>stacklab-identity-guard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>stacklab-app</name>
-	<description>Stacklab App</description>
+	<name>stacklab-identity-guard</name>
+	<description>Stacklab Identity Guard</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -48,6 +48,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>3.0.5</version>
 		</dependency>
 	</dependencies>
 
