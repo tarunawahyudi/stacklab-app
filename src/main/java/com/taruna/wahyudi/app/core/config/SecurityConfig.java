@@ -10,28 +10,27 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableWebSecurity
 public class SecurityConfig {
 
-    @SneakyThrows
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) {
-        auth.inMemoryAuthentication();
-    }
+//    @SneakyThrows
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth) {
+//        auth.inMemoryAuthentication();
+//    }
 
-    @SneakyThrows
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) {
-            httpSecurity.authorizeHttpRequests(authorize -> authorize
-                    .requestMatchers(
-                            "/swagger-ui.html",
-                            "/swagger-ui/**",
-                            "/v3/api-docs/**",
-                            "/swagger-resources/**",
-                            "/webjars/**"
-                    ).permitAll()
-                    .anyRequest().authenticated());
-
-            return httpSecurity.build();
-    }
+//    @SneakyThrows
+//    @Bean
+//    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) {
+//            httpSecurity.authorizeHttpRequests(authorize -> authorize
+//                    .requestMatchers(
+//                            "/swagger-ui.html",
+//                            "/swagger-ui/**",
+//                            "/v3/api-docs/**",
+//                            "/swagger-resources/**",
+//                            "/webjars/**"
+//                    ).permitAll()
+//                    .anyRequest().authenticated());
+//
+//            return httpSecurity.build();
+//    }
 }

@@ -6,7 +6,11 @@ import lombok.Builder;
 
 @Builder
 public record RegisterUserRequest(
-        @NotBlank String name,
-        @NotBlank @Email String email,
-        @NotBlank String password
+        @NotBlank(message = "{validation.required}")
+        String name,
+        @NotBlank(message = "{validation.required}")
+        @Email(message = "{validation.email}")
+        String email,
+        @NotBlank(message = "{validation.required}")
+        String password
 ) {}

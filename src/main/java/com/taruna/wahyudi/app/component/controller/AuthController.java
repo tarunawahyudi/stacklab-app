@@ -4,12 +4,14 @@ import com.taruna.wahyudi.app.component.model.dto.LoginUserRequest;
 import com.taruna.wahyudi.app.component.model.dto.TokenResponse;
 import com.taruna.wahyudi.app.component.service.AuthService;
 import com.taruna.wahyudi.app.core.global.WebResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
+@Tag(name = "Authentication")
 @RequestMapping("${application.api.uri}/auth")
 public class AuthController {
 

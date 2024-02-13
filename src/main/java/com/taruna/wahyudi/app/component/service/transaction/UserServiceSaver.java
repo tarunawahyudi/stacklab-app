@@ -13,7 +13,6 @@ public final class UserServiceSaver extends UserServiceTransaction {
     private final UserRepository userRepository;
 
     public void save(RegisterUserRequest request) {
-        super.validate(request);
 
         String password = super.getApplicationConfig().passwordEncoder().encode(request.password());
         User user = User.builder()

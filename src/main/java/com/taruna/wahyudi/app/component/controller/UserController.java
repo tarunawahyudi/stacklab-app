@@ -4,6 +4,7 @@ import com.taruna.wahyudi.app.component.model.dto.RegisterUserRequest;
 import com.taruna.wahyudi.app.component.service.UserService;
 import com.taruna.wahyudi.app.core.global.WebResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ public class UserController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public WebResponse<String> register(@RequestBody RegisterUserRequest requestBody) {
+    public WebResponse<String> register(@Valid @RequestBody RegisterUserRequest requestBody) {
         userService.register(requestBody);
         return WebResponse.<String>builder().data("success").build();
     }

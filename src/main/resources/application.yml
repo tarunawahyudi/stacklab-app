@@ -26,3 +26,15 @@ spring:
 
 server:
   port: 8080
+
+springdoc:
+  api-docs:
+    path: /sig-api
+  swagger-ui:
+    path: /docs
+    display-request-duration: true
+    disable-swagger-default-url: true
+    tagsSorter: alpha
+    operationsSorter: alpha
+    persistAuthorization: true
+    defaultModelsExpandDepth: -1
